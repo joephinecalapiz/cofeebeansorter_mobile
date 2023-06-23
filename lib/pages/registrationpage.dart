@@ -1,12 +1,10 @@
 import 'dart:convert';
 
-
-import 'package:coffee_bean_mobile/constant.dart';
+import 'package:coffeebeansorter_mobile/api/constant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:provider/provider.dart';
 import 'LoginPage.dart';
 
 class RegistrationPage extends StatefulWidget {

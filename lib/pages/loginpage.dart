@@ -1,14 +1,14 @@
 import 'dart:convert';
 
-// import 'package:event_management_mobile/screens/signuppage.dart';
-import 'package:coffee_bean_mobile/screens/registrationpage.dart';
+import 'package:coffeebeansorter_mobile/api/api_response.dart';
+import 'package:coffeebeansorter_mobile/api/constant.dart';
+import 'package:coffeebeansorter_mobile/model/user.dart';
+import 'package:coffeebeansorter_mobile/pages/registrationpage.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../api/api_response.dart';
-import '../constant.dart';
-import '../models/user.dart';
+
 import 'HomePage.dart';
 
 class LoginScreen extends StatefulWidget {

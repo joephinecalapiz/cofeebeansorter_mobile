@@ -1,4 +1,6 @@
 
+import 'package:coffeebeansorter_mobile/local/utility.dart';
+import 'package:coffeebeansorter_mobile/pages/HomePage.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatelessWidget {
