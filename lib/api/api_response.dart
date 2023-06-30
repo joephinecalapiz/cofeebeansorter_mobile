@@ -1,10 +1,10 @@
 import 'dart:convert';
 
+import 'package:coffeebeansorter_mobile/api/constant.dart';
+import 'package:coffeebeansorter_mobile/local/shared_preferences.dart';
+import 'package:coffeebeansorter_mobile/model/user.dart';
 import 'package:http/http.dart' as http;
 
-import '../constant.dart';
-import '../locals/shared_prefs.dart';
-import '../models/user.dart';
 class ApiResponse{
   Object?  data;
   String? error;

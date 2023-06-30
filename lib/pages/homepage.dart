@@ -1,8 +1,9 @@
-import 'package:coffee_bean_mobile/constant.dart';
-import 'package:coffee_bean_mobile/screens/tabs/history.dart';
-import 'package:coffee_bean_mobile/screens/tabs/sorter.dart';
-import 'package:coffee_bean_mobile/screens/tabs/customer.dart';
-import 'package:coffee_bean_mobile/screens/tabs/profile.dart';
+
+import 'package:coffeebeansorter_mobile/api/constant.dart';
+import 'package:coffeebeansorter_mobile/tabs/customer.dart';
+import 'package:coffeebeansorter_mobile/tabs/history.dart';
+import 'package:coffeebeansorter_mobile/tabs/profile.dart';
+import 'package:coffeebeansorter_mobile/tabs/sorter.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
