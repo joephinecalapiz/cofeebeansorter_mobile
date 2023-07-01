@@ -1,9 +1,10 @@
 
+import 'package:coffeebeansorter_mobile/adminpages/tabs/customer.dart';
+import 'package:coffeebeansorter_mobile/adminpages/tabs/history.dart';
+import 'package:coffeebeansorter_mobile/adminpages/tabs/profile.dart';
+import 'package:coffeebeansorter_mobile/adminpages/tabs/sorter.dart';
 import 'package:coffeebeansorter_mobile/api/constant.dart';
-import 'package:coffeebeansorter_mobile/tabs/customer.dart';
-import 'package:coffeebeansorter_mobile/tabs/history.dart';
-import 'package:coffeebeansorter_mobile/tabs/profile.dart';
-import 'package:coffeebeansorter_mobile/tabs/sorter.dart';
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -26,7 +27,6 @@ class _HomePageState extends State<HomePage> {
   static const List<String> _appBarTitles = <String>[
     'Customers',
     'History',
-    'Add User',
     'Sorter',
     'Profile',
   ];
