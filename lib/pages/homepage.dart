@@ -50,15 +50,15 @@ class _HomePageState extends State<HomePage> {
         selectedItemColor: bottomNavBarBtnColor,
         elevation: 0,
         type: BottomNavigationBarType.fixed,
-        items: <BottomNavigationBarItem>[
-          const BottomNavigationBarItem(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
             icon: Icon(
-              Icons.person_rounded,
+              Icons.people_alt_sharp,
               size: 30,
             ),
             label: 'Customers',
           ),
-          const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(
               Icons.history,
               size: 30,
@@ -66,25 +66,13 @@ class _HomePageState extends State<HomePage> {
             label: 'History',
           ),
           BottomNavigationBarItem(
-            icon: Container(
-              decoration: BoxDecoration(
-                color: Colors.brown,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              padding: const EdgeInsets.all(10),
-              child:
-              const Icon(Icons.add_rounded, size: 40, color: Colors.white),
-            ),
-            label: '',
-          ),
-          const BottomNavigationBarItem(
             icon: Icon(
-              Icons.person_add_alt_rounded,
+              Icons.people_alt_rounded,
               size: 30,
             ),
-            label: 'Sorters',
+            label: 'Sorter',
           ),
-          const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(
               Icons.person,
               size: 30,

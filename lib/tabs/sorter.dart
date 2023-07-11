@@ -138,6 +138,7 @@ class _SorterPageState extends State<SorterPage> {
           ),
         ),
       ),
+
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
@@ -152,7 +153,7 @@ class _SorterPageState extends State<SorterPage> {
                         Padding(
                           padding: const EdgeInsets.all(20),
                           child: Text(
-                            'List of Customers',
+                            'List of Sorter',
                             style: TextStyle(
                               color: primaryTextColor,
                               fontWeight: FontWeight.bold,
