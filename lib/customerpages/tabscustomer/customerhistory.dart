@@ -3,47 +3,53 @@ import 'package:coffeebeansorter_mobile/api/constant.dart';
 import 'package:coffeebeansorter_mobile/local/drawer.dart';
 import 'package:flutter/material.dart';
 
-class ExplorePage extends StatelessWidget {
-  const ExplorePage({Key? key}) : super(key: key);
+class HistoryCustomerPage extends StatelessWidget {
+  const HistoryCustomerPage({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: kToolbarHeight + 10, // Increase the toolbar height to provide additional space
+        toolbarHeight: kToolbarHeight + 10,
+        // Increase the toolbar height to provide additional space
         elevation: 20,
         backgroundColor: const Color(0xFF11101D),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
-            bottom: Radius.circular(20), // Apply rounded corners to the bottom of the AppBar
+            bottom: Radius.circular(
+                20), // Apply rounded corners to the bottom of the AppBar
           ),
         ),
         title: Container(
-          margin: const EdgeInsets.symmetric(vertical: 10), // Add vertical margin to the container
+          margin: const EdgeInsets.symmetric(vertical: 10),
+          // Add vertical margin to the container
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
           ),
           child: Row(
             children: [
-              const SizedBox(width: 10), // Add some left padding
+              const SizedBox(width: 10),
+              // Add some left padding
               const Icon(Icons.search, color: Colors.grey),
-              const SizedBox(width: 10), // Add space between the icon and the text field
+              const SizedBox(width: 10),
+              // Add space between the icon and the text field
               Expanded(
                 child: TextField(
                   decoration: const InputDecoration(
                     hintText: 'Search',
                     border: InputBorder.none,
                     isDense: true, // Reduce the height of the text field
-                    contentPadding: EdgeInsets.symmetric(vertical: 8), // Adjust the vertical padding
+                    contentPadding: EdgeInsets.symmetric(
+                        vertical: 8), // Adjust the vertical padding
                   ),
                   // Add the eventNames list as the search terms
-                  onChanged: (value) {
-                  },
+                  onChanged: (value) {},
                 ),
               ),
-              const SizedBox(width: 10), // Add some right padding
+              const SizedBox(width: 10),
+              // Add some right padding
             ],
           ),
         ),
@@ -64,27 +70,24 @@ class ExplorePage extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(20),
                           child: Text(
-                            'Sorting Company',
+                            'History of Sorter Process',
                             style: TextStyle(
                               color: primaryTextColor,
                               fontWeight: FontWeight.bold,
                               fontSize: 25,
                             ),
                           ),
-
                         ),
-
+                      ],
+                    ),
                   ],
                 ),
 
               ],
             ),
           ],
-            )
-    ],
-    ),),
-
-
+        ),
+      ),
     );
   }
 }

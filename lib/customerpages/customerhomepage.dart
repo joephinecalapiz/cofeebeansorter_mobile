@@ -3,7 +3,9 @@ import 'package:coffeebeansorter_mobile/adminpages/tabs/history.dart';
 import 'package:coffeebeansorter_mobile/adminpages/tabs/profile.dart';
 import 'package:coffeebeansorter_mobile/adminpages/tabs/sorter.dart';
 import 'package:coffeebeansorter_mobile/api/constant.dart';
+import 'package:coffeebeansorter_mobile/customerpages/tabscustomer/customerhistory.dart';
 import 'package:coffeebeansorter_mobile/customerpages/tabscustomer/explorepage.dart';
+import 'package:coffeebeansorter_mobile/customerpages/tabscustomer/favoritecustomer.dart';
 
 import 'package:flutter/material.dart';
 
@@ -19,8 +21,8 @@ class _HomePageCustomerState extends State<HomePageCustomer> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     ExplorePage(),
-    HistoryPage(),
-    SorterPage(),
+    HistoryCustomerPage(),
+    FavoritePage(),
     ProfilePage(),
   ];
 
