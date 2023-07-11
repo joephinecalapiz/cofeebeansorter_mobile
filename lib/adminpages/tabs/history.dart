@@ -1,16 +1,12 @@
 
 import 'package:coffeebeansorter_mobile/api/constant.dart';
+import 'package:coffeebeansorter_mobile/local/drawer.dart';
 import 'package:coffeebeansorter_mobile/pages/LoginPage.dart';
 import 'package:flutter/material.dart';
 
-class SorterPage extends StatefulWidget {
-  const SorterPage({Key? key}) : super(key: key);
+class HistoryPage extends StatelessWidget {
+  const HistoryPage({Key? key}) : super(key: key);
 
-  @override
-  State<SorterPage> createState() => _SorterPageState();
-}
-
-class _SorterPageState extends State<SorterPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -60,85 +56,7 @@ class _SorterPageState extends State<SorterPage> {
         ),
       ),
 
-      drawer: Drawer(
-        backgroundColor: const Color(0xFF11101D),
-        child: SizedBox(
-          width: 230,
-          height: MediaQuery
-              .of(context)
-              .size
-              .height,
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              const DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Color(0xFF11101D),
-                  image: DecorationImage(
-                    image: AssetImage('asset/logo.png'),
-                    // fit: BoxFit.cover,
-                  ),
-                ),
-                child: Text(
-                  '',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                  ),
-                ),
-              ),
-              const Spacer(),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 12.0),
-                child: Container(
-
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 12.0),
-                child: Container(
-
-                  child: ListTile(
-                    contentPadding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
-                    leading: const Icon(
-                        Icons.arrow_back_rounded, color: Colors.white),
-                    title: const Text(
-                      'Profile',
-                      style: TextStyle(color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    onTap: () {
-
-                    },
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 12.0),
-                child: ListTile(
-                  contentPadding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
-                  leading: const Icon(Icons.logout_sharp, color: Colors.white),
-                  title: const Text(
-                    'Logout',
-                    style: TextStyle(color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const LoginScreen()),
-                    );
-                  },
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-
+      drawer: const CustomDrawer(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
@@ -153,7 +71,7 @@ class _SorterPageState extends State<SorterPage> {
                         Padding(
                           padding: const EdgeInsets.all(20),
                           child: Text(
-                            'List of Sorter',
+                            'Coffee Bean Sorted',
                             style: TextStyle(
                               color: primaryTextColor,
                               fontWeight: FontWeight.bold,
@@ -173,5 +91,4 @@ class _SorterPageState extends State<SorterPage> {
       ),
     );
   }
-
 }

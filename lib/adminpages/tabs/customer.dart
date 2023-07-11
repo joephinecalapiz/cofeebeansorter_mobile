@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:coffeebeansorter_mobile/api/constant.dart';
+import 'package:coffeebeansorter_mobile/local/drawer.dart';
 import 'package:coffeebeansorter_mobile/pages/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -51,69 +52,7 @@ class CustomerPage extends StatelessWidget {
         ),
       ),
 
-      drawer: Drawer(
-        backgroundColor: const Color(0xFF11101D),
-        child: SizedBox(
-          width: 230,
-          height: MediaQuery.of(context).size.height,
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              const DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Color(0xFF11101D),
-                ),
-                child: CircleAvatar(
-                  backgroundImage: AssetImage('asset/logo.png'),
-                  // Specify radius if needed: radius: 50,
-                ),
-              ),
-
-              const Spacer(),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 12.0),
-                child: Container(
-
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 12.0),
-                child: Container(
-
-                  child: ListTile(
-                    contentPadding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
-                    leading: const Icon(Icons.person_rounded, color: Colors.white),
-                    title: const Text(
-                      'Profile',
-                      style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),
-                    ),
-                    onTap: () {
-
-                    },
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 12.0),
-                child: ListTile(
-                  contentPadding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
-                  leading: const Icon(Icons.logout_sharp, color: Colors.white),
-                  title: const Text(
-                    'Logout',
-                    style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),
-                  ),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const LoginScreen()),
-                    );
-                  },
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      drawer: const CustomDrawer(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
