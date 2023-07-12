@@ -124,7 +124,7 @@ class _ProfilePageCustomerState extends State<ProfilePageCustomer> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: ListTile(
-                    leading: const Icon(Icons.person, color: Colors.white70),
+                    leading: const Icon(Icons.email_rounded, color: Colors.white70),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(1),
                     ),
@@ -149,7 +149,7 @@ class _ProfilePageCustomerState extends State<ProfilePageCustomer> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: ListTile(
-                    leading: const Icon(Icons.person, color: Colors.white70),
+                    leading: const Icon(Icons.numbers_rounded, color: Colors.white70),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(1),
                     ),
@@ -174,7 +174,7 @@ class _ProfilePageCustomerState extends State<ProfilePageCustomer> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: ListTile(
-                    leading: const Icon(Icons.person, color: Colors.white70),
+                    leading: const Icon(Icons.location_city_rounded, color: Colors.white70),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(1),
                     ),

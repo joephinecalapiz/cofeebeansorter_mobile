@@ -28,21 +28,21 @@ class _EditPageState extends State<EditPage> {
         children: [
           TextFormField(
             controller: nameController,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               labelText: 'Name',
             ),
           ),
           const SizedBox(height: 10),
           TextFormField(
             controller: emailController,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               labelText: 'Email',
             ),
           ),
           const SizedBox(height: 10),
           TextFormField(
             controller: contactNumberController,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               labelText: 'Contact Number',
             ),
           ),
