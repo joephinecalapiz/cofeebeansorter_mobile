@@ -1,7 +1,6 @@
-import 'dart:convert';
 
 import 'package:coffeebeansorter_mobile/api/constant.dart';
-import 'package:coffeebeansorter_mobile/local/shared_preferences.dart';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -13,69 +12,193 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  //----------------------API calls------------------\\
-  Future<Map<String,dynamic>> fetchUser() async {
-    String token = await getToken();
-    final response = await http.get(
-        Uri.parse(userProfileURL),
-        headers: {
-          'Authorization' : 'Bearer $token'
-        }
-    );
-    if(response.statusCode == 200){
-      final Map <String, dynamic> data = json.decode(response.body);
-      return data['user'];
-    }else{
-      throw Exception('Error');
-    }
-  }
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    fetchUser();
-  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: FutureBuilder(
-            future: fetchUser(),
-            builder: (BuildContext context, snapshot){
-              if(snapshot.hasError){
-                return const Text('404 error');
-              }else if(snapshot.hasData){
-                final data = snapshot.data!;
-                return Column(
-                  children: [
-                    const SizedBox(height: 20),
-                    Container(
-                        width: 200,
-                        height: 200,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(width: 1, color: Colors.black),
-                            image: const DecorationImage(
-                                image: NetworkImage('http://192.168.98.11:8000/storage/user_profile/ZRchGen0YysE9ZPxTS0JSB7QU2vT5qWDyuJKL4dq.jpg'),
-                                fit: BoxFit.cover
-                            )
-                        )
-                    ),
-                    const SizedBox(height: 30),
-                    Text('Name: ${data['name']}'),
-                    const SizedBox(height: 5),
-                    Text('Email: ${data['email']}'),
-                    const SizedBox(height: 30),
-                  ],
-                );
-              }
-              return const CircularProgressIndicator();
-            },
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        toolbarHeight: kToolbarHeight + 160,
+        elevation: 10,
+        backgroundColor: const Color(0xffC57272),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(30),
+          ),
+        ),
+        title: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              CircleAvatar(
+                backgroundColor: Colors.white,
+                radius: 60,
+                backgroundImage: AssetImage(
+                  'asset/logo.png',
+                ),
+              ),
+              SizedBox(height: 10),
+              Text(
+                'joephinecalapiz7@gmail.com',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 10),
+              Text(
+                'CUSTOMER',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
         ),
       ),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Profile Information',
+                      style: TextStyle(
+                        color: primaryTextColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25,
+                      ),
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      // Handle edit button press
+                    },
+                    icon: Icon(Icons.edit),
+                    color: primaryTextColor,
+                  ),
+                ],
+              ),
+            ),
+
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: ListTile(
+                leading: const Icon(Icons.person, color: Colors.white70),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(1),
+                ),
+                tileColor: const Color(0xffA78585),
+                textColor: Colors.black,
+                title: Row(
+                  children: const [
+                    Expanded(
+                      flex: 4,
+                      child: Text('Name:'),
+                    ),
+                    Expanded(
+                      flex: 8,
+                      child: Text('Joephine Calapiz'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: ListTile(
+                leading: const Icon(Icons.person, color: Colors.white70),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(1),
+                ),
+                tileColor: const Color(0xffA78585),
+                textColor: Colors.black,
+                title: Row(
+                  children: const [
+                    Expanded(
+                      flex: 4,
+                      child: Text('Email:'),
+                    ),
+                    Expanded(
+                      flex: 8,
+                      child: Text('joephinecalapiz7@gmail.com'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: ListTile(
+                leading: const Icon(Icons.person, color: Colors.white70),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(1),
+                ),
+                tileColor: const Color(0xffA78585),
+                textColor: Colors.black,
+                title: Row(
+                  children: const [
+                    Expanded(
+                      flex: 4,
+                      child: Text('Contact number:'),
+                    ),
+                    Expanded(
+                      flex: 8,
+                      child: Text('09518052760'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: ListTile(
+                leading: const Icon(Icons.person, color: Colors.white70),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(1),
+                ),
+                tileColor: const Color(0xffA78585),
+                textColor: Colors.black,
+                title: Row(
+                  children: const [
+                    Expanded(
+                      flex: 4,
+                      child: Text('Address:'),
+                    ),
+                    Expanded(
+                      flex: 8,
+                      child: Text('Zone 7 Acacia St. CDO'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+
+
+
+          ],
+        ),
+
+      ),
+
     );
   }
 }
