@@ -1,14 +1,9 @@
-
-import 'package:coffeebeansorter_mobile/adminpages/tabs/history.dart';
-import 'package:coffeebeansorter_mobile/adminpages/tabs/profile.dart';
-import 'package:coffeebeansorter_mobile/adminpages/tabs/sorter.dart';
+import 'package:flutter/material.dart';
 import 'package:coffeebeansorter_mobile/api/constant.dart';
 import 'package:coffeebeansorter_mobile/customerpages/tabscustomer/customerhistory.dart';
 import 'package:coffeebeansorter_mobile/customerpages/tabscustomer/customerprofile.dart';
 import 'package:coffeebeansorter_mobile/customerpages/tabscustomer/explorepage.dart';
 import 'package:coffeebeansorter_mobile/customerpages/tabscustomer/customerfavorite.dart';
-
-import 'package:flutter/material.dart';
 
 class HomePageCustomer extends StatefulWidget {
   HomePageCustomer({Key? key}) : super(key: key);
