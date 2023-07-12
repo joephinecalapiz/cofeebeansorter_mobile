@@ -104,7 +104,7 @@ class _AddSortPageState extends State<AddSortPage> {
                 const SizedBox(height: 16),
                 TextField(
                   controller: commentsController,
-                  maxLines: 10,
+                  maxLines: 7,
                   decoration: const InputDecoration(
                     labelText: 'Comments',
                   ),
