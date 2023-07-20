@@ -103,7 +103,7 @@ class LandingPage extends StatelessWidget {
               child: TextButton(
                 onPressed: () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) =>  HomePageCustomer()),
+                  MaterialPageRoute(builder: (context) =>  HomePage()),
                 ),
                 style: TextButton.styleFrom(padding: EdgeInsets.zero),
                 child: Container(
