@@ -48,16 +48,15 @@ class LandingPage extends StatelessWidget {
               child: SizedBox(
                 width: 230 * size,
                 height: 200 * size,
-                child: ClipOval(
                   child: Image.asset(
-                    'asset/logo.png',
+                    'asset/bean.png',
                     // Replace with the actual asset path of your image
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
             ),
-          ),
+
           Positioned(
             left: 20 * size,
             top: 350 * size,

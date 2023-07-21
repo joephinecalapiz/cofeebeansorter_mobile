@@ -12,11 +12,8 @@ class CustomerPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: const CustomAppBar(),
-
-
       drawer: const CustomDrawer(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -44,7 +41,6 @@ class CustomerPage extends StatelessWidget {
                     ),
                   ],
                 ),
-
               ],
             ),
           ],

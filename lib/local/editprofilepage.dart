@@ -22,7 +22,8 @@ class _EditPageState extends State<EditPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SingleChildScrollView(
+        child:Container(
       padding: const EdgeInsets.all(20),
       child: Column(
         children: [
@@ -72,6 +73,7 @@ class _EditPageState extends State<EditPage> {
           ),
         ],
       ),
+        )
     );
   }
 }
