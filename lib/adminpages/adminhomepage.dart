@@ -18,8 +18,8 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
-    CustomerPage(),
     HistoryPage(),
+    CustomerPage(),
     SorterPage(),
     ProfilePage(),
   ];
@@ -53,17 +53,17 @@ class _HomePageState extends State<HomePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.people_alt_sharp,
-              size: 30,
-            ),
-            label: 'Customers',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
               Icons.history,
               size: 30,
             ),
             label: 'History',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.people_alt_rounded,
+              size: 30,
+            ),
+            label: 'Customers',
           ),
           BottomNavigationBarItem(
             icon: Icon(

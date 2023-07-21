@@ -12,15 +12,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'MyDay',
+      title: 'BeanCoders',
       debugShowCheckedModeBanner: false,
       //scrollBehavior: MyCustomScrollBehavior(),
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: const Scaffold(
-        body: SingleChildScrollView(
-          child: LandingPage(),
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: LandingPage(),
+          ),
         ),
       ),
     );
