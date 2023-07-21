@@ -1,5 +1,6 @@
 
 import 'package:coffeebeansorter_mobile/api/constant.dart';
+import 'package:coffeebeansorter_mobile/local/editprofilepage.dart';
 
 import 'package:flutter/material.dart';
 
@@ -48,7 +49,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               SizedBox(height: 10),
               Text(
-                'CUSTOMER',
+                'ADMIN',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,
@@ -82,10 +83,15 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                   IconButton(
                     onPressed: () {
-                      // Handle edit button press
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return EditPage(); // Replace with your edit page widget
+                        },
+                      );
                     },
-                    icon: Icon(Icons.edit),
-                    color: primaryTextColor,
+                    icon: const Icon(Icons.edit),
+                    color: Colors.blue,
                   ),
                 ],
               ),
