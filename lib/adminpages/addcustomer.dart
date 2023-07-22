@@ -38,7 +38,7 @@ class _AddCustomerPageState extends State<AddCustomerPage> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: const Text('Sorting Details'),
+          title: const Text('Customer Details'),
           content: Text('Name: $name\nAddress: $address\nPhone Number: $pnumber'),
           actions: [
             Padding(
@@ -78,7 +78,7 @@ class _AddCustomerPageState extends State<AddCustomerPage> {
           child:
           Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
             Text(
-              'Add Sorting Details', // need e change into saktong name kung unsa ang company ang gi click
+              'Add Customer Details', // need e change into saktong name kung unsa ang company ang gi click
               style: TextStyle(
                 color: primaryTextColor,
                 fontWeight: FontWeight.bold,
@@ -90,7 +90,7 @@ class _AddCustomerPageState extends State<AddCustomerPage> {
               width: 300, // Adjust the width of the box as needed
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                color: Colors.brown, // Replace with your desired color
+                color: const Color(0xFFC19A6B).withOpacity(0.30), // Replace with your desired color
                 borderRadius: BorderRadius.circular(5),
                 boxShadow: [
                   BoxShadow(
@@ -103,16 +103,7 @@ class _AddCustomerPageState extends State<AddCustomerPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 20),
-                  Text(
-                    'Gloria Arabica Coffee Beans',
-                    style: TextStyle(
-                      color: primaryTextColor,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
-                  ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
                   TextField(
                     controller: nameController,
 
@@ -141,11 +132,14 @@ class _AddCustomerPageState extends State<AddCustomerPage> {
                         const SizedBox(height: 16),
                         ElevatedButton(
                           onPressed: _saveData,
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.green, // Set the background color to green
+                          ),
                           child: const Text('Save'),
                         ),
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
