@@ -36,11 +36,10 @@ class CustomerPage extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  // Navigate to the new page when the button is pressed
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => AddCustomerPage(), // Replace `NewPage` with the destination page widget.
+                      builder: (context) => AddCustomerPage(),
                     ),
                   );
                 },
