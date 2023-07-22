@@ -96,8 +96,6 @@ class _ProfilePageState extends State<ProfilePage> {
                 ],
               ),
             ),
-
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: ListTile(
@@ -145,7 +143,6 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
             ),
-
             const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
