@@ -103,7 +103,7 @@ class _ProfilePageState extends State<ProfilePage> {
               child: ListTile(
                 leading: const Icon(Icons.person, color: Colors.white70),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(1),
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 tileColor: const Color(0xffA78585),
                 textColor: Colors.black,
@@ -125,9 +125,9 @@ class _ProfilePageState extends State<ProfilePage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: ListTile(
-                leading: const Icon(Icons.person, color: Colors.white70),
+                leading: const Icon(Icons.email, color: Colors.white70),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(1),
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 tileColor: const Color(0xffA78585),
                 textColor: Colors.black,
@@ -150,9 +150,9 @@ class _ProfilePageState extends State<ProfilePage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: ListTile(
-                leading: const Icon(Icons.person, color: Colors.white70),
+                leading: const Icon(Icons.phone, color: Colors.white70),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(1),
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 tileColor: const Color(0xffA78585),
                 textColor: Colors.black,
@@ -175,9 +175,9 @@ class _ProfilePageState extends State<ProfilePage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: ListTile(
-                leading: const Icon(Icons.person, color: Colors.white70),
+                leading: const Icon(Icons.home, color: Colors.white70),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(1),
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 tileColor: const Color(0xffA78585),
                 textColor: Colors.black,

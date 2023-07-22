@@ -51,6 +51,42 @@ class _HistoryPageState extends State<HistoryPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: kToolbarHeight + 10,
+        elevation: 20,
+        backgroundColor: const Color(0xFF481F01), // Change to red color here
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(20),
+          ),
+        ),
+        title: Container(
+          margin: const EdgeInsets.symmetric(vertical: 10),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Row(
+            children: [
+              const SizedBox(width: 10),
+              const Icon(Icons.search, color: Colors.grey),
+              const SizedBox(width: 10),
+              Expanded(
+                child: TextField(
+                  decoration: const InputDecoration(
+                    hintText: 'Search',
+                    border: InputBorder.none,
+                    isDense: true,
+                    contentPadding: EdgeInsets.symmetric(vertical: 8),
+                  ),
+                  onChanged: (value) {
+                    // Add your search logic here
+                  },
+                ),
+              ),
+              const SizedBox(width: 10),
+            ],
+          ),
+        ),
         bottom: TabBar(
           isScrollable: true,
           controller: tabController,
@@ -60,10 +96,10 @@ class _HistoryPageState extends State<HistoryPage>
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(10),
                     topRight: Radius.circular(10))),
-            color: Color(0xFF3a506b),
+            color: Color(0xFF6F4E37),
           ),
           labelColor: Colors.white,
-          unselectedLabelColor: const Color(0xFF3a506b),
+          unselectedLabelColor: const Color(0xFFCD7F32),
           tabs: const [
             Tab(child: Text('Pending')),
             Tab(child: Text('Finished')),
@@ -80,6 +116,7 @@ class _HistoryPageState extends State<HistoryPage>
           PageOne(family: cancel),
         ],
       ),
+
       // body: SingleChildScrollView(
       //   scrollDirection: Axis.vertical,
       //   child: Column(

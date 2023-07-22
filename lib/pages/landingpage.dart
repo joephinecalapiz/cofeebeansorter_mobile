@@ -108,8 +108,9 @@ class LandingPage extends StatelessWidget {
                 child: Container(
                   width: 337 * size,
                   height: double.infinity,
-                  decoration: const BoxDecoration(
-                    color: Color(0xff7e1e18),
+                  decoration: BoxDecoration(
+                    color: const Color(0xff7e1e18),
+                    borderRadius: BorderRadius.circular(15),
                   ),
                   child: Center(
                     child: Center(

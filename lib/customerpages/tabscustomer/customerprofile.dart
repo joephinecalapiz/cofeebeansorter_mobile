@@ -100,7 +100,7 @@ class _ProfilePageCustomerState extends State<ProfilePageCustomer> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: ListTile(
-                    leading: const Icon(Icons.person, color: Colors.white70),
+                    leading: const Icon(Icons.email, color: Colors.white70),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(1),
                     ),
@@ -178,7 +178,7 @@ class _ProfilePageCustomerState extends State<ProfilePageCustomer> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(1),
                     ),
-                    tileColor: const Color(0xffA78585),
+                    // tileColor: const Color(0xffA78585),
                     textColor: Colors.black,
                     title: Row(
                       children: const [
@@ -194,15 +194,9 @@ class _ProfilePageCustomerState extends State<ProfilePageCustomer> {
                     ),
                   ),
                 ),
-
-
-
-
               ],
             ),
-
         ),
-
     );
   }
 }
