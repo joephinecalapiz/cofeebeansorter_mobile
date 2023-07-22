@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:coffeebeansorter_mobile/adminpages/addcustomer.dart';
 import 'package:coffeebeansorter_mobile/api/constant.dart';
 import 'package:coffeebeansorter_mobile/local/appbar.dart';
 import 'package:coffeebeansorter_mobile/local/drawer.dart';
@@ -33,27 +34,39 @@ class CustomerPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Transform.translate(
-                  offset: const Offset(15, 0),
-                  child: Container(
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.circular(10),
+              GestureDetector(
+                onTap: () {
+                  // Navigate to the new page when the button is pressed
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AddCustomerPage(), // Replace `NewPage` with the destination page widget.
                     ),
-                    child: Text(
-                      'Add New',
-                      style: TextStyle(
-                        color: primaryTextColor,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
+                  );
+                },
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: Transform.translate(
+                    offset: const Offset(15, 0),
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Text(
+                        'Add New',
+                        style: TextStyle(
+                          color: primaryTextColor,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
+
               const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
