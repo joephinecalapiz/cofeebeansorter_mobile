@@ -107,7 +107,6 @@ class CustomerPage extends StatelessWidget {
                         ),
                       ],
                     ),
-
                   ],
                 ),
               ),

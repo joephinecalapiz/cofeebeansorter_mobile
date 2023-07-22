@@ -46,7 +46,6 @@ class _SorterPageState extends State<SorterPage> {
                     ),
                   ],
                 ),
-
               ],
             ),
           ],
