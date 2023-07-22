@@ -12,38 +12,51 @@ class AddSortPage extends StatefulWidget {
 
 class _AddSortPageState extends State<AddSortPage> {
   TextEditingController kiloController = TextEditingController();
-  TextEditingController commentsController = TextEditingController();
+  TextEditingController customerController = TextEditingController();
+  TextEditingController sorterController = TextEditingController();
+
 
   @override
   void dispose() {
     kiloController.dispose();
-    commentsController.dispose();
+    customerController.dispose();
+    sorterController.dispose();
     super.dispose();
   }
 
   void _saveData() {
     String kilo = kiloController.text;
-    String comments = commentsController.text;
+    String customer = customerController.text;
+    String sorter = sorterController.text;
 
 
     kiloController.clear();
-    commentsController.clear();
+    customerController.clear();
+    sorterController.clear();
 
     showDialog(
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: const Text('Data Saved'),
-          content: Text('Kilo: $kilo\nComments: $comments'),
+          title: const Text('Sorting Details'),
+          content: Text('Kilo: $kilo\nCustomer: $customer\nSorter: $sorter'),
           actions: [
             TextButton(
               onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () {
+
                 Navigator.pop(context); // Close the dialog
               },
               child: const Text('Confirmed'),
             ),
           ],
         );
+
       },
     );
   }
@@ -60,7 +73,7 @@ class _AddSortPageState extends State<AddSortPage> {
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
             Text(
-              'Sorting Company Details', // need e change into saktong name kung unsa ang company ang gi click
+              'Add Sorting Details', // need e change into saktong name kung unsa ang company ang gi click
               style: TextStyle(
                 color: primaryTextColor,
                 fontWeight: FontWeight.bold,
@@ -102,12 +115,18 @@ class _AddSortPageState extends State<AddSortPage> {
                       labelText: 'Kilo',
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 20),
                   TextField(
-                    controller: commentsController,
-                    maxLines: 7,
+                    controller: customerController,
                     decoration: const InputDecoration(
-                      labelText: 'Comments',
+                      labelText: 'Customer Name',
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  TextField(
+                    controller: sorterController,
+                    decoration: const InputDecoration(
+                      labelText: 'Sorter Name',
                     ),
                   ),
                   const SizedBox(height: 16),
