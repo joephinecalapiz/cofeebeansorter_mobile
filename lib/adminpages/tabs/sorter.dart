@@ -1,4 +1,3 @@
-
 import 'package:coffeebeansorter_mobile/api/constant.dart';
 import 'package:coffeebeansorter_mobile/local/appbar.dart';
 import 'package:coffeebeansorter_mobile/local/drawer.dart';
@@ -13,12 +12,10 @@ class SorterPage extends StatefulWidget {
 }
 
 class _SorterPageState extends State<SorterPage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(),
-
       drawer: const CustomDrawer(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -48,10 +45,67 @@ class _SorterPageState extends State<SorterPage> {
                 ),
               ],
             ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Container(
+                padding: const EdgeInsets.all(10),
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: const Color(0xFFD2B48C),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(5),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(30),
+                        child: Image.asset(
+                          'asset/logo.png',
+                          width: 80,
+                          height: 80,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Name',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          'Address',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          'ID',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontStyle: FontStyle.italic,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
     );
   }
-
 }

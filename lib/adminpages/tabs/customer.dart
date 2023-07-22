@@ -54,60 +54,63 @@ class CustomerPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20), // Adding some spacing between the "Add New" container and the lists.
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Color(0xFFD2B48C),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(5),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(30),
-                        child: Image.asset(
-                          'asset/logo.png',
-                          width: 80,
-                          height: 80,
+              const SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFD2B48C),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(5),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(30),
+                          child: Image.asset(
+                            'asset/logo.png',
+                            width: 80,
+                            height: 80,
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(width: 10),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          'Name',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
+                      const SizedBox(width: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            'Name',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 5),
-                        Text(
-                          'Address',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
+                          SizedBox(height: 5),
+                          Text(
+                            'Address',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 5),
-                        Text(
-                          'ID',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontStyle: FontStyle.italic,
+                          SizedBox(height: 5),
+                          Text(
+                            'Phone Number',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontStyle: FontStyle.italic,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
