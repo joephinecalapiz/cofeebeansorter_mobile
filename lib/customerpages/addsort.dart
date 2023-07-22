@@ -53,71 +53,73 @@ class _AddSortPageState extends State<AddSortPage> {
     return Scaffold(
       appBar: const CustomAppBar(),
       drawer: const CustomDrawer(),
-      body: Container(
-        // Add a Container to wrap the body content
-        padding: const EdgeInsets.all(20.0),
-        child:
-            Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-          Text(
-            'Sorting Company Details', // need e change into saktong name kung unsa ang company ang gi click
-            style: TextStyle(
-              color: primaryTextColor,
-              fontWeight: FontWeight.bold,
-              fontSize: 25,
+      body: SingleChildScrollView(
+        child: Container(
+          // Add a Container to wrap the body content
+          padding: const EdgeInsets.all(20.0),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            Text(
+              'Sorting Company Details', // need e change into saktong name kung unsa ang company ang gi click
+              style: TextStyle(
+                color: primaryTextColor,
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+              ),
             ),
-          ),
-              const SizedBox(height: 20),
-              Container(
-            width: 300, // Adjust the width of the box as needed
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              color: Colors.brown, // Replace with your desired color
-              borderRadius: BorderRadius.circular(5),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
-                  blurRadius: 7,
-                  offset: const Offset(0, 3),
-                ),
-              ],
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
                 const SizedBox(height: 20),
-                Text(
-                  'Gloria Arabica Coffee Beans',
-                  style: TextStyle(
-                    color: primaryTextColor,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                Container(
+              width: 300, // Adjust the width of the box as needed
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: Colors.brown, // Replace with your desired color
+                borderRadius: BorderRadius.circular(5),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    blurRadius: 7,
+                    offset: const Offset(0, 3),
                   ),
-                ),
-                const SizedBox(height: 20),
-                TextField(
-                  controller: kiloController,
-                  keyboardType: TextInputType.number,
-                  decoration: const InputDecoration(
-                    labelText: 'Kilo',
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 20),
+                  Text(
+                    'Gloria Arabica Coffee Beans',
+                    style: TextStyle(
+                      color: primaryTextColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 16),
-                TextField(
-                  controller: commentsController,
-                  maxLines: 7,
-                  decoration: const InputDecoration(
-                    labelText: 'Comments',
+                  const SizedBox(height: 20),
+                  TextField(
+                    controller: kiloController,
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      labelText: 'Kilo',
+                    ),
                   ),
-                ),
-                const SizedBox(height: 16),
-                ElevatedButton(
-                  onPressed: _saveData,
-                  child: const Text('Save'),
-                ),
-              ],
+                  const SizedBox(height: 16),
+                  TextField(
+                    controller: commentsController,
+                    maxLines: 7,
+                    decoration: const InputDecoration(
+                      labelText: 'Comments',
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  ElevatedButton(
+                    onPressed: _saveData,
+                    child: const Text('Save'),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ]),
+          ]),
+        ),
       ),
     );
   }
