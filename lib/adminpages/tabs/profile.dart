@@ -21,7 +21,7 @@ class _ProfilePageState extends State<ProfilePage> {
         automaticallyImplyLeading: false,
         toolbarHeight: kToolbarHeight + 160,
         elevation: 10,
-        backgroundColor: const Color(0xffC57272),
+        backgroundColor: const Color(0xFF4B3621),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
             bottom: Radius.circular(30),
@@ -105,7 +105,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
-                tileColor: const Color(0xffA78585),
+                tileColor: const Color(0xFFAF804F),
                 textColor: Colors.black,
                 title: Row(
                   children: const [
@@ -129,7 +129,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
-                tileColor: const Color(0xffA78585),
+                tileColor: const Color(0xFFAF804F),
                 textColor: Colors.black,
                 title: Row(
                   children: const [
@@ -154,7 +154,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
-                tileColor: const Color(0xffA78585),
+                tileColor: const Color(0xFFAF804F),
                 textColor: Colors.black,
                 title: Row(
                   children: const [
@@ -179,7 +179,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
-                tileColor: const Color(0xffA78585),
+                tileColor: const Color(0xFFAF804F),
                 textColor: Colors.black,
                 title: Row(
                   children: const [
