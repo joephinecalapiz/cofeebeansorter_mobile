@@ -2,6 +2,7 @@
 import 'package:coffeebeansorter_mobile/adminpages/adminhomepage.dart';
 import 'package:coffeebeansorter_mobile/customerpages/customerhomepage.dart';
 import 'package:coffeebeansorter_mobile/local/utility.dart';
+import 'package:coffeebeansorter_mobile/pages/beforeloginpage.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatelessWidget {
@@ -102,7 +103,7 @@ class LandingPage extends StatelessWidget {
               child: TextButton(
                 onPressed: () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) =>  HomePage()),
+                  MaterialPageRoute(builder: (context) =>  const BeLoginPage()),
                 ),
                 style: TextButton.styleFrom(padding: EdgeInsets.zero),
                 child: Container(

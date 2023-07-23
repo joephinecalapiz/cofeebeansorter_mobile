@@ -35,7 +35,6 @@ class CustomDrawer extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 12.0),
               child: Container(
-
                 child: ListTile(
                   contentPadding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
                   leading: const Icon(Icons.history, color: Colors.white),
